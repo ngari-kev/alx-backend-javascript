@@ -7,11 +7,9 @@
 // return array;
 // }
 export default function appendToEachArrayValue(array, appendString) {
-  let index = 0;
-  for (const value of array) {
-    array[index] = appendString + value;
-    index += 1;
+  const array2 = array;
+  for (const [index, value] of array.entries()) {
+    array2[index] = appendString + value;
   }
-
-  return array;
+  return array2;
 }
