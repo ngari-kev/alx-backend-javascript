@@ -3,5 +3,5 @@ export default function createIteratorObject(report) {
   for (const idx of Object.values(report.allEmployees)) {
     result.push(...idx);
   }
-    return result;
+  return result;
 }
