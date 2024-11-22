@@ -1,4 +1,5 @@
-/**
+export default class HolbertonCourse {
+  /**
   * Creates a new `HolbertonCourse` class, checks and validates the attributes
   *
   * @param {String} name - The name of the course.
@@ -6,7 +7,6 @@
   * @param {String[]} students - The names of students taking the course.
   *
   */
-export default class HolbertonCourse {
   constructor(name, length, students) {
     this.name = name;
     this.length = length;
