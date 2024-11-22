@@ -21,7 +21,7 @@ export default class HolbertonCourse {
   // setter for name
   set name(newName) {
     if (typeof newName !== 'string' || newName.trim() === '') {
-        throw new TypeError('Invalid type or name is empty.');
+    throw new TypeError('Invalid type or name is empty.');
     }
     this._name = newName;
   }
