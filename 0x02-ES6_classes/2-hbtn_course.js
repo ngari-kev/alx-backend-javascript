@@ -1,11 +1,11 @@
- /**
-   * Creates a new `HolbertonCourse` class, checks and validates the attributes
-   *
-   * @param {String} name - The name of the course.
-   * @param {Number} length - Duration of the course(in months).
-   * @param {String[]} students - The names of students taking the course.
-   *
-   */
+/**
+  * Creates a new `HolbertonCourse` class, checks and validates the attributes
+  *
+  * @param {String} name - The name of the course.
+  * @param {Number} length - Duration of the course(in months).
+  * @param {String[]} students - The names of students taking the course.
+  *
+  */
 export default class HolbertonCourse {
   constructor(name, length, students) {
     this.name = name;
@@ -21,7 +21,7 @@ export default class HolbertonCourse {
   // setter for name
   set name(newName) {
     if (typeof newName !== 'string' || newName.trim() === '') {
-    throw new TypeError('Invalid type or name is empty.');
+      throw new TypeError('Invalid type or name is empty.');
     }
     this._name = newName;
   }
