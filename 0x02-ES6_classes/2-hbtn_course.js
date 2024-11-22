@@ -1,3 +1,11 @@
+ /**
+   * Creates a new `HolbertonCourse` class, checks and validates the attributes
+   *
+   * @param {String} name - The name of the course.
+   * @param {Number} length - Duration of the course(in months).
+   * @param {String[]} students - The names of students taking the course.
+   *
+   */
 export default class HolbertonCourse {
   constructor(name, length, students) {
     this.name = name;
@@ -38,7 +46,7 @@ export default class HolbertonCourse {
 
   // setter for students
   set students(newStudents) {
-    if (!Array.isArray(newStudents) || !newStudents.every((s) => typeof s !== 'string')) {
+    if (!Array.isArray(newStudents) || !newStudents.every((s) => typeof s === 'string')) {
       throw new TypeError('Students must be an array of strings');
     }
     this._students = newStudents;
