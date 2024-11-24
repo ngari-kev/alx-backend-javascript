@@ -38,7 +38,7 @@ export default class Currency {
 
   /**
    * Returns a formatted string representing the full currency name and code.
-   * 
+   *
    * @returns {String} The formatted string (e.g., "Dollar (USD)").
    */
   displayFullCurrency() {
