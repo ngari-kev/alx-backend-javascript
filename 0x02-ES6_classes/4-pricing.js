@@ -1,9 +1,5 @@
 import Currency from './3-currency';
 
-/**
- *
- */
-
 export default class Pricing {
   constructor(amount, currency) {
     this.amount = amount;
@@ -12,7 +8,7 @@ export default class Pricing {
 
   // setter for amount
   set amount(newAmount) {
-    if (!(newAmount >= 0 && typeof newAmount === 'number')) {
+    if (!(newAmount >= 0 || typeof newAmount === 'number')) {
       throw new TypeError('amount entered should be a non-negative number');
     }
     this._amount = newAmount;
