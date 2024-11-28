@@ -8,7 +8,7 @@ export default class Car {
   get brand() {
     return this._brand;
   }
-  
+
   set brand(value) {
     this._brand = value;
   }
@@ -37,5 +37,5 @@ export default class Car {
     const Species = this.constructor[Symbol.species];
 
     return new Species();
-    }
   }
+}
