@@ -1,4 +1,4 @@
-import { readDatabase } from '../utils.js';
+import readDatabase from '../utils';
 
 export default class StudentsController {
   static async getAllStudents(req, res) {
@@ -12,9 +12,8 @@ export default class StudentsController {
       const fields = await readDatabase(databaseFile);
       let responseMessage = 'This is the list of our students\n';
 
-      const sortedFields = Object.keys(fields).sort((a, b) =>
-        a.toLowerCase().localeCompare(b.toLowerCase())
-      );
+      const sortedFields = Object.keys(fields)
+        .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
       sortedFields.forEach((field) => {
         const students = fields[field];
