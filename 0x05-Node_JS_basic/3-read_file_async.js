@@ -4,14 +4,14 @@ function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, 'utf8')
       .then((data) => {
-        const lines = data.split('\n').filter(line => line.trim());
+        const lines = data.split('\n').filter((line) => line.trim());
         const students = lines.slice(1);
 
         console.log(`Number of students: ${students.length}`);
 
         const studentsByField = {};
 
-        students.forEach(student => {
+        students.forEach((student) => {
           const [firstname, , , field] = student.split(',');
           if (!studentsByField[field]) {
             studentsByField[field] = [];

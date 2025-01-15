@@ -4,7 +4,7 @@ function countStudents(path) {
   try {
     const data = fs.readFileSync(path, 'utf8');
 
-    const lines = data.split('\n').filter(line => line.trim());
+    const lines = data.split('\n').filter((line) => line.trim());
 
     const students = lines.slice(1);
 
@@ -12,7 +12,7 @@ function countStudents(path) {
 
     const studentsByField = {};
 
-    students.forEach(student => {
+    students.forEach((student) => {
       const [firstname, , , field] = student.split(',');
       if (!studentsByField[field]) {
         studentsByField[field] = [];
