@@ -6,20 +6,20 @@ const app = express();
 const PORT = 1245;
 
 app.get('/', (_req, res) => {
-  res.send('Hello ALX!');
+  res.send('Hello Holberton School!');
 });
 
 app.get('/students', (req, res) => {
   const databaseFile = process.argv[2];
   if (!databaseFile) {
-    res.send('This is the list of our students\n');
+    res.status(200).send('This is the list of our students\n');
     return;
   }
 
   const databasePath = path.resolve(databaseFile);
   fs.readFile(databasePath, 'utf8', (error, fileContent) => {
     if (error) {
-      res.send('This is the list of our students\nCannot load the database');
+      res.status(200).send('This is the list of our students\nCannot load the database');
       return;
     }
 
@@ -42,7 +42,7 @@ app.get('/students', (req, res) => {
       responseMessage += `List: ${students.join(', ')}\n`;
     }
 
-    res.send(responseMessage.trim());
+    res.status(200).send(responseMessage.trim());
   });
 });
 
